@@ -6,6 +6,15 @@
 function EventDispatcher () {
 	var listeners = [];
 	
+	/**
+	 * Add an event listener
+	 *
+	 * @param string 	name 			The name of the event
+	 * @param function 	listener 		The event listener
+	 * @param integer	priority = 0 	The priority of the listener
+	 *
+	 * @return object id The ID of the listener
+	 */
 	this.listen = function ( name, listener, priority ) {
 		priority = priority || 0;
 		
@@ -27,11 +36,22 @@ function EventDispatcher () {
 		};
 	};
 	
+	/**
+	 * Detach an event listener
+	 *
+	 * @param object id The ID of the listener
+	 */
 	this.detach = function ( id ) {
 		var i = listeners[id.name][id.priority].indexOf(id.listener);
 		listeners[id.name][id.priority].splice(i, 1);
 	}
 	
+	/**
+	 * Dispatch an event
+	 *
+	 * @param string name 	The name of the event
+	 * @param object event 	The event to dispatch
+	 */
 	this.dispatch = function ( name, event ) {
 		var priority, listener;
 		
