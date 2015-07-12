@@ -33,6 +33,12 @@ dispatcher.dispatch('world.ready', { 'msg': 'Hello World!' });
 // Enjoy!
 ```
 
+Links
+-----
+
+To make an object it's own event dispatcher, please see
+[mrdoob/eventdispatcher.js](https://github.com/mrdoob/eventdispatcher.js/).
+
 License
 -------
 
