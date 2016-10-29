@@ -39,6 +39,8 @@ Links
 To make an object it's own event dispatcher, please see
 [mrdoob/eventdispatcher.js](https://github.com/mrdoob/eventdispatcher.js/).
 
+The same event dispatcher is written in Python: [Zzortell/EventDispatcher.py](https://github.com/Zzortell/EventDispatcher.py).
+
 License
 -------
 
@@ -49,4 +51,4 @@ file that was distributed with this source code.
 TODO
 ----
 
-Add propagation system like in EventDispatcher.py
+Add propagation system and 'all' keyword like in EventDispatcher.py
